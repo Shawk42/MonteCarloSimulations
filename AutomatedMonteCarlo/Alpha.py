@@ -92,7 +92,7 @@ plt.plot(bucket, count_sum)
 plt.plot(bucket,lin_reg)
 plt.title("Uniform distribution test")
 plt.legend(("Culmative Sum", "Linear Regression"))
-plt.text(8,-10,round(r_val**2,2))
+plt.text(8,-10,("r^2", round(r_val**2,2)))
 
 plt.show()
 
