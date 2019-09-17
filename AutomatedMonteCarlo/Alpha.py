@@ -5,6 +5,7 @@ The intention of this script is to detect a distribution type of a model
 import matplotlib.pyplot as plt
 import numpy as np
 from prettytable import PrettyTable
+from scipy import stats
 
 """ Functions """
 
@@ -59,6 +60,17 @@ while i < len(buck):
 
 count_sum = np.cumsum(count)
 
+
+"""Uniform distribution checking"""
+
+regress_raw = stats.linregress(bucket, count_sum)
+
+slope, intercept, r_val, p_val, std_err = regress_raw
+
+lin_reg = intercept + (slope * bucket)
+
+
+"""Plotting"""
 plt.subplot(2,2,1)
 plt.subplots_adjust(hspace=0.3)
 
@@ -75,10 +87,14 @@ plt.subplot(2,2,3)
 plt.plot(bucket,count_sum)
 plt.title("Cumulative Sum")
 
-
-
+plt.subplot(2,2,4)
+plt.plot(bucket, count_sum)
+plt.plot(bucket,lin_reg)
 
 plt.show()
+
+
+
 
 
 
