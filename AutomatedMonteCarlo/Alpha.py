@@ -75,9 +75,7 @@ plt.subplot(2,2,3)
 plt.plot(bucket,count_sum)
 plt.title("Cumulative Sum")
 
-plt.subplot(2,2,4)
-plt.plot(deriv)
-plt.title("Derivative of Cumulative Sum")
+
 
 
 plt.show()
