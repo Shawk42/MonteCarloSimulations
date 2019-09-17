@@ -1,7 +1,7 @@
 """"
 The intention of this script is to detect a distribution type of a model
 
-Beta is the orginal looping code 
+Beta is the orginal looping code
 
 """
 print("Version = Beta")

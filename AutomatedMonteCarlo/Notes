@@ -14,3 +14,8 @@ documents learning and thought proccess. This is almost a form of a digital logb
 9/17/19
     Given last nights learnings, a simple test of whether the culmative sum is line has been created. Well the framwork has
     I am looking for a way to automate this. I have a few ideas that I will try out.
+
+    Beta has been created to loop the code. Functions should be explored in the future. However this inefficent solution
+    of Beta provided a rapid solution to protyping and only changing one unknown (technique/process) at a time
+
+    The r^2 method of comparing the culmative sum to a a line appears to be a valid first attempt. Further testing is needed.

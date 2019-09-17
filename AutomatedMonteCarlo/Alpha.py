@@ -1,7 +1,10 @@
 """"
 The intention of this script is to detect a distribution type of a model
-"""
 
+Alpha is a non looping script. It should be used to further develop a single occurence
+
+"""
+print("Version = Alpha")
 import matplotlib.pyplot as plt
 import numpy as np
 from prettytable import PrettyTable
