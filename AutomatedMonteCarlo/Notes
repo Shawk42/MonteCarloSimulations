@@ -1,0 +1,12 @@
+This is a collection of notes regarding the project. This is meant to be an informal file that
+documents learning and thought proccess. This is almost a form of a digital logbook for the project.
+
+9/16/19 - Start of project
+    This project developed out of an interest in automated Monte Carlo simulations. Their may be existing solutions
+    on the web, however this is intended to be a learning experience for myself. This also provided a new challenge
+    for my programming skills. I will be looking to implement new to me methods and techniques. I would like for this to
+    be both automated and scalable, however right now a working model is needed.
+
+    Completed - Start of code
+    Lessons Learned - The derivative of the cumulative sum is the count
+    Future progress - Find a way around the derivative gap
