@@ -1,5 +1,5 @@
 This is a collection of notes regarding the project. This is meant to be an informal file that
-documents learning and thought proccess. This is almost a form of a digital logbook for the project.
+documents learning and thought process. This is almost a form of a digital logbook for the project.
 
 9/16/19 - Start of project
     This project developed out of an interest in automated Monte Carlo simulations. Their may be existing solutions
@@ -19,3 +19,7 @@ documents learning and thought proccess. This is almost a form of a digital logb
     of Beta provided a rapid solution to protyping and only changing one unknown (technique/process) at a time
 
     The r^2 method of comparing the culmative sum to a a line appears to be a valid first attempt. Further testing is needed.
+
+    Charlie was skipped
+
+    Delta is the original autonomous version

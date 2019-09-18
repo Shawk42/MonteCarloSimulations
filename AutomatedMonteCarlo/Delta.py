@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from prettytable import PrettyTable
 from scipy import stats
+import time
 
 
 """ Functions """
@@ -39,8 +40,13 @@ tri_correct = 0
 tri_incorrect = 0
 no_guess = 0
 errors = PrettyTable(["J", "Actual Dist", "Guessed Dist", "r^2"])
-while j <= 500:
 
+
+run_time = int(input("How many seconds to run the test for? "))
+end_time = time.time() + run_time
+
+#while j <= 500:
+while time.time() <= end_time:
     """Initial Plot"""
     t, x = sample()
 
@@ -96,7 +102,7 @@ while j <= 500:
             norm_incorrect = norm_incorrect + 1
             errors.add_row([j, t, guess, r_val])
 
-    elif r_val > 0.86 and r_val < 0.89:
+    elif r_val > 0.86 and r_val < 0.9:
         guess = "Triangular"
         if guess == t:
             tri_correct = tri_correct + 1
@@ -106,47 +112,29 @@ while j <= 500:
     else:
         guess = "No guess"
         no_guess = no_guess + 1
+        errors.add_row([j, t, guess, r_val])
 
     j = j + 1
 
+"""Results and Result Output"""
+uni_total = uni_correct + uni_incorrect
+norm_total = norm_correct + norm_incorrect
+tri_total = tri_correct + tri_incorrect
 
+output = PrettyTable(["Distribution Type", "Correct", "Incorrect", "Total"])
+output.add_row(["Uniform", uni_correct, uni_incorrect, uni_total])
+output.add_row(["Normal", norm_correct, norm_incorrect, norm_total])
+output.add_row(["Triangular", tri_correct, tri_incorrect, tri_total])
+output.add_row(["No Guess", "Null", "Null", no_guess])
 
+print("   Results Table   ")
+print(output)
+print("")
+print("   Error Table   ")
 print(errors)
+print("")
 
 
-
-"""Plotting - Orginal"""
-"""
-plt.subplot(2,3,1)
-plt.subplots_adjust(hspace=0.3)
-
-plt.hist(x, buck, align= 'left',rwidth= 0.8)
-plt.xlim(0,10)
-plt.xticks(buck)
-plt.title("Histogram")
-
-plt.subplot(2,3,2)
-plt.plot(bucket,count)
-plt.title("Count")
-
-plt.subplot(2,3,3)
-plt.plot(bucket,count_sum)
-plt.title("Cumulative Sum")
-
-plt.subplot(2,3,4)
-plt.plot(bucket, count_sum)
-plt.plot(bucket,lin_reg)
-plt.title("Uniform distribution test")
-plt.legend(("Culmative Sum", "Linear Regression"))
-plt.text(8,-10,("r^2", round(r_val**2,2)))
-
-plt.subplot(2,3,5)   #This was a rapid trouble shooting feature
-plt.title("Actual r^2")
-plt.plot(t_mat,r_val_mat,"o")
-plt.grid()
-
-plt.show()
-"""
 
 
 
