@@ -23,3 +23,5 @@ documents learning and thought process. This is almost a form of a digital logbo
     Charlie was skipped
 
     Delta is the original autonomous version
+
+    Delta runs for a set amount of time and outputs two tables that contain dashboard and error information.
